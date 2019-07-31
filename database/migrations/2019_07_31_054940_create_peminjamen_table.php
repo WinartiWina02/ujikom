@@ -19,7 +19,7 @@ class CreatePeminjamenTable extends Migration
             $table->bigInteger('petugas_kode');
             $table->bigInteger('peminjam_kode');
             $table->date('peminjam_tgl');
-            $table->data('peminjam_tgl_hrs_kembali');
+            $table->date('peminjam_tgl_hrs_kembali');
             $table->timestamps();
         });
     }
