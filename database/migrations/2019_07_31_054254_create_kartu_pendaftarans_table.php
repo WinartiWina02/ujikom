@@ -15,12 +15,11 @@ class CreateKartuPendaftaransTable extends Migration
     {
         Schema::create('kartu_pendaftarans', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('kartu_berkode');
-            $table->bigInteger('petugas_kode');
-            $table->bigInteger('peminjam_kode');
+            $table->unsignedBigInteger('id_kategori');
+            $table->unsignedBigInteger('id_peminjam');
             $table->date('kartu_tgl_pembuatan');
             $table->date('kartu_tgl_akhir');
-            $table->date('kartu_status_aktif');
+            $table->string('kartu_status_aktif');
             $table->timestamps();
         });
     }

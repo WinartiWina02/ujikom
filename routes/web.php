@@ -1,4 +1,5 @@
 <?php
+use Illuminate\Routing\RouteGroup;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,3 +19,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'],
+function () {
+    Route::get('/', function () {
+        return view('admin.index');
+    });
+});
+
