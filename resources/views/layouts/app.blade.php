@@ -33,12 +33,19 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
+
                         @guest
                         @else
                             <li class="nav-item">
-                                <a class="nav-link" href="">buku</a>
+                                <a class="nav-link" href="">Super Admin</a>
                             </li>
-                         @endguest
+                              <li class="nav-item">
+                                <a class="nav-link" href="">Role Admin</a>
+                            </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="">User</a>
+                              </li>
+                            @endguest
                     </ul>
 
                     <!-- Right Side Of Navbar -->
