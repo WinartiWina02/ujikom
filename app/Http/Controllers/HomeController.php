@@ -35,7 +35,7 @@ class HomeController extends Controller
 
     protected function adminDashboard()
     {
-        return redirect('admin');
+        return view('home');
     }
     protected function memberDashboard()
     {
