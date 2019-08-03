@@ -35,7 +35,10 @@
                     <ul class="navbar-nav mr-auto">
 
                         @guest
+                        {{-- kondisi --}}
                         @else
+
+                        @role('admin')
                             <li class="nav-item">
                                 <a class="nav-link" href="">Super Admin</a>
                             </li>
@@ -45,6 +48,7 @@
                               <li class="nav-item">
                                 <a class="nav-link" href="">User</a>
                               </li>
+                         @endrole
                             @endguest
                     </ul>
 
