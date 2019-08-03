@@ -7,12 +7,7 @@
                 <div class="card-header">Dashboard</div>
 
                 <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-                        Welcome to admin Dashboard
+                    <b>{{  Auth::user()->name }}</b>, Welcome to Admin Dashboard
                 </div>
             </div>
         </div>
